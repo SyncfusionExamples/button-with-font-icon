@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonWithFontIcon", "ButtonWithFontIcon\ButtonWithFontIcon.csproj", "{870FC9C9-47F9-4AFA-8C1C-371D0C60815D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{870FC9C9-47F9-4AFA-8C1C-371D0C60815D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870FC9C9-47F9-4AFA-8C1C-371D0C60815D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870FC9C9-47F9-4AFA-8C1C-371D0C60815D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870FC9C9-47F9-4AFA-8C1C-371D0C60815D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {534C06F7-D649-422E-8C2E-DB232C1B5BEC}
+	EndGlobalSection
+EndGlobal
