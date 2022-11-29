@@ -1,15 +1,30 @@
 # Button with Font Icon in WinForms application
 ## Overview
-The WinForms ButtonEdit control embeds a text box control with a collection of button controls that can be customized to create many commonly used interfaces such as a file or folder browser, or a drop-down text control. It’s also possible to add more than one button in the editor. Its rich feature set includes button appearance customization with images, text, borders, and more.
+This repository demonstrate about customizing the button. The button can be customized using the paint event.
 
-## Features
-* Button edit can be customized to create many commonly used interfaces such as a file and folder browser or a drop-down text control.
-* Buttons can be added or removed through design verbs and also accessed through the buttons property collection editor.
-* Button edit supports themes (blue, olive, and silver) and visual styles.
-Button edit can be used to display the calendar pop-up.
-* Users can add and assign tasks to each button edit child button.
-* The internal text box for button edit can be modified to any custom text box, such as currency text box, integer text box, and percent text box.
-* Images can be drawn over the buttons.
-Supports data binding.
+# C#
+    protected override void OnPaint(PaintEventArgs e)
+            {
+                base.OnPaint(e);
 
-![ButtonEdit with FontIcon](ButtonWithFontIcon/Image/Button%20with%20fontItcon.png)
+                string iconChar = char.ConvertFromUtf32((int)this.IconFont);
+                Font iconFont = new Font(Form1.pfc.Families[0], 11.5f, FontStyle.Bold);
+
+                if (this.IconFont.ToString().Contains("First"))
+                {
+                    e.Graphics.DrawString(iconChar, iconFont, new SolidBrush(Color.Black), 20, 9);
+                    e.Graphics.DrawString(this.IconFont.ToString().Replace("Page", string.Empty), iconFont, new SolidBrush(Color.Black), 40, 6);
+                }
+                else if(this.IconFont.ToString().Contains("Previous"))
+                {
+                    e.Graphics.DrawString(iconChar, iconFont, new SolidBrush(Color.Black), 3, 8);
+                    e.Graphics.DrawString(this.IconFont.ToString().Replace("Page", string.Empty), iconFont, new SolidBrush(Color.Black), 20, 6);
+                }
+                else if (this.IconFont.ToString().Contains("Next") || this.IconFont.ToString().Contains("Last"))
+                {
+                    e.Graphics.DrawString(iconChar, iconFont, new SolidBrush(Color.Black), 60, 9);
+                    e.Graphics.DrawString(this.IconFont.ToString().Replace("Page", string.Empty), iconFont, new SolidBrush(Color.Black), 24, 6);
+                }
+            }
+
+![Custom Button](ButtonWithFontIcon/Image/Button%20with%20fontItcon.png)
